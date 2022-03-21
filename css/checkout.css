@@ -1,0 +1,62 @@
+.pricingDetails, .payingMethod{
+    background-color: rgb(236, 236, 236);
+    height: 360px;
+    width: 600px;
+    margin-top: 25px;
+    border-radius: 15px;
+    padding: 50px 25px;
+}
+.pricingDetails .delivery{
+    border-bottom: 2px solid black;
+    border-width: 50%;
+    padding-bottom: 15px;
+}
+.payingMethod{
+    height: 390px;
+}
+.payingMethod img {
+    width: 10%;
+    padding-left: 15px;
+}
+.userInfo{
+    margin-top: 25px;
+    border-radius: 15px;
+    padding: 50px 25px;
+    background-color: rgb(236, 236, 236);
+}
+#endingMessage{
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: rgba(199, 199, 199, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#endingMessage .messageContent{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+#endingMessage .messageContent img{
+    width: 30%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#endingMessage .messageContent .finalMessage{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media screen and (max-width:990px) {
+    .pricingDetails, .payingMethod, .userInfo{
+        width: 100%;
+    }
+}

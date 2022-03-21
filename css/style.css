@@ -1,0 +1,85 @@
+/* Start NavBar */
+.navbar{
+  background-color: #232F3F;
+}
+.navbar .navbar-nav .nav-item a i{
+  font-size: 18px;
+  transition: all 0.75s;
+}
+.navbar .navbar-nav .nav-item a:hover .fa-facebook-f{
+  color: rgb(38, 89, 255);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-instagram{
+  color: rgb(255, 38, 121);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-youtube{
+  color: rgb(255, 15, 15);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-pinterest-p{
+  color: rgb(255, 65, 65);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-twitter{
+  color: rgb(38, 175, 255);
+}
+@media screen and (max-width:990px) {
+  .navbar ul li{
+    text-align: center;
+  }
+  .navbar ul .nav-item a {
+    padding-right: 15px !important;
+  }
+  .navbar{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+  }
+}
+/* End NavBar */
+
+/* Start Men Section */
+section{
+  padding: 30px 0px;
+}
+section .productItem{
+  background-color: rgb(194, 194, 194);
+  text-align: center;
+  padding: 15px;
+  padding-top:25px ;
+  border-radius: 5px;
+  /* height: 520px; */
+  cursor: pointer;
+  transition: all 0.75s;
+}
+section .productItem:hover{
+  background-color: #232F3F;
+  color: white;
+}
+section .productItem img{
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+}
+section .productItem .footerContent p{
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+}
+section .productItem .footerContent button{
+  background-color: #232F3F;
+  transition: all 0.75s;
+}
+section .productItem:hover button{
+  background-color: rgb(255, 255, 4);
+  color: #232F3F !important;
+  font-weight: bold;
+}
+@media screen and (max-width:990px) {
+  section{
+    padding-top: 75px;
+  }
+  section .productItem img{
+    height: 420px;
+  }
+}
+/* End Men Section */

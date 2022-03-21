@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon-Clone-CheckOut</title>
+    <!-- FavIcon -->
+    <link
+      rel="shortcut icon"
+      href="image/Amazon_icon.png"
+      type="image/FavIcon-icon"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- FontAwsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/checkout.css">
+  </head>
+  <body>
+    <!-- Start NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">AMAZON</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="ps-2">Menu</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >All product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Women</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Jewelery</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Electronics</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Follow Us</a>
+            </li>
+
+            <li class="nav-item d-flex">
+              <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+              <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="nav-link" href="#"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"
+                ><i class="fas fa-shopping-cart"></i>
+                <span
+                  class="badge rounded-pill bg-primary text-white"
+                  id="cartNumbers"
+                >
+                  0
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- Receive total price with taxes -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="pricingDetails mb-3">
+                    <div class="price d-flex align-items-center">
+                        <table>
+                            <tr><h5 class="fw-bold">Products Price: </h5></tr>
+                            <tr><p class="h5 px-3 text-muted" id="productPrceArea"></p></tr>
+                        </table>
+                    </div>
+
+                    <div class="taxes d-flex align-items-center">
+                        <table>
+                            <tr><h5 class="fw-bold">Tax (14%): </h5></tr>
+                            <tr><p class="h5 px-3 text-muted" id="taxesArea"></p></tr>
+                        </table>
+                    </div>
+
+                    <div class="delivery d-flex align-items-center">
+                        <table>
+                            <tr><h5 class="fw-bold">Delivery fees: </h5></tr>
+                            <tr><p class="h5 px-3 text-muted">$50</p></tr>
+                        </table>
+                    </div>
+
+                    <div class="totalPrice py-4 d-flex align-items-center">
+                        <table>
+                            <tr><h5 class="fw-bold" >Total Price: </h5></tr>
+                            <tr><p class="h5 px-3 text-muted" id="totalPrice"></p></tr>
+                        </table>
+                    </div>
+
+                    <button class="btn btn-outline-warning w-100" id="ProceedToCheckout">Proceed to check out</button>
+                    <a href="cart.html" class="btn btn-outline-dark w-100 mt-3" >Back to cart</a>
+                </div>
+
+                <div class="payingMethod" style="display: none;">
+                  <h3 class="pb-3">What your favourite payment method?</h3>
+                  <div class="alert alert-danger" style="display: none;">
+                    <i class="fas fa-exclamation-triangle h5"></i>
+                    <span class="h5 p-3">You should choose your payment method!</span>
+                  </div>
+                  <div class="visa py-3  d-flex align-items-center">
+                    <input type="radio" name="payingMethod">
+                    <img src="image/1200px-Visa.svg.jpg" alt="visaImage">
+                  </div>
+                 
+                  <div class="masterCard py-3  d-flex align-items-center">
+                    <input type="radio" name="payingMethod">
+                    <img src="image/1200px-Mastercard_2019_logo.svg.png" alt="visaImage">
+                  </div>
+
+                  <div class="fawery py-3  d-flex align-items-center">
+                    <input type="radio" name="payingMethod">
+                    <img src="image/fawryybusiness.jpg" alt="visaImage">
+                  </div>
+
+                  <div class="cach py-3  d-flex align-items-center">
+                    <input type="radio" name="payingMethod">
+                    <p class="ps-3 h5 fw-bold">Cach On Delivery</p>
+                  </div>
+
+                  <button class="btn btn-outline-warning w-100" id="checkOut">Check Out</button>
+                  
+                </div>
+            </div>
+
+            <div class="col-md-6  col-sm-12" style="display: none;" id="userInfo">
+                <div class="userInfo">
+                    <h3>User Info</h3>
+                    <div class="alert alert-danger" style="display: none;">
+                      <i class="fas fa-exclamation-triangle h5"></i>
+                      <span class="h5 p-3">You should Fill all fields for your order</span>
+                    </div>
+                    <div class="name pt-2">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" class="form-control">
+                    </div>
+
+                    <div class="email pt-2">
+                        <label for="Email">Email</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+
+                    <div class="adress pt-2">
+                        <label for="adress">Adress</label>
+                        <input type="text" id="adress" class="form-control">
+                    </div>
+
+                    <div class="phoneNumber pt-2">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="number" id="phoneNumber" class="form-control">
+                    </div>
+
+                    <button class="btn btn-info mt-4" id="orderNow">Check Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ending Message -->
+    <section style="display: none;" id="endingMessage">
+        <div class="messageContent">
+            <img src="image/301-3011314_pe-success-icon-task-done-removebg-preview.png" alt="task-done img">
+            <div class="finalMessage text-center">
+              <h3 id="userName"></h3>
+              <p>Your order will be delevired within <span class="fw-bold"> 2-5 days</span></p>
+              <p>For any information contact us +20 2 223-344-55</p>
+              <a href="index.html" class="btn btn-outline-info w-100 mt-3" >Go Home</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="js/all.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

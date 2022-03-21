@@ -1,0 +1,49 @@
+/* Start NavBar */
+.navbar {
+  background-color: #232f3f;
+}
+.navbar .navbar-nav .nav-item a i {
+  font-size: 18px;
+  transition: all 0.75s;
+}
+.navbar .navbar-nav .nav-item a:hover .fa-facebook-f {
+  color: rgb(38, 89, 255);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-instagram {
+  color: rgb(255, 38, 121);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-youtube {
+  color: rgb(255, 15, 15);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-pinterest-p {
+  color: rgb(255, 65, 65);
+}
+.navbar .navbar-nav .nav-item a:hover .fa-twitter {
+  color: rgb(38, 175, 255);
+}
+@media screen and (max-width: 990px) {
+  .navbar ul li {
+    text-align: center;
+  }
+  .navbar ul .nav-item a {
+    padding-right: 15px !important;
+  }
+}
+/* End NavBar */
+
+/* Start Buying Area  */
+#buyingArea {
+  position: absolute;
+  top: 15%;
+  right: 20px;
+  border: solid 1px #232f3f;
+  border-radius: 5px;
+  padding: 15px;
+}
+@media screen and (max-width: 990px) {
+  #buyingArea {
+    position: unset;
+    margin: 20px;
+  }
+}
+/* End Buying Area */
